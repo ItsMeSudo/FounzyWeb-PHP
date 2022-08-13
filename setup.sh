@@ -12,7 +12,7 @@ cd /root && \
     cd /root/FounzyWeb-PHP && \
     sed -i 's/\r//' /root/FounzyWeb-PHP/gitclone && \
     sed -i 's/\r//' /root/FounzyWeb-PHP/permchk && \
-    sed -i 's/\r//' /root/FounzyWeb/update && \
+    sed -i 's/\r//' /root/FounzyWeb-PHP/update && \
     sed -i 's/\r//' /root/FounzyWeb-PHP/startup && \
     mv /root/FounzyWeb-PHP/startup /usr/bin && \
     mv /root/FounzyWeb-PHP/gitclone /usr/bin && \
