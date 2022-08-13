@@ -1,5 +1,5 @@
 #!/bin/bash
-#FounzyWeb server  &&&& DEBIAN
+#FounzyWeb-PHP server  &&&& Ubuntu
 #SUDO                 2022              SERVERHU.EU
 st () {
     /usr/sbin/nginx
