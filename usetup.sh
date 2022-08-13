@@ -5,18 +5,18 @@
 cd /root && \
     apt install -y nginx unzip wget curl git && \
     mkdir -p /tmp/sudo && \
-    cd /root/FounzyWeb && \
-    sed -i 's/\r//' /root/FounzyWeb/gitclone && \
-    sed -i 's/\r//' /root/FounzyWeb/permchk && \
-    sed -i 's/\r//' /root/FounzyWeb/update && \
-    sed -i 's/\r//' /root/FounzyWeb/startup && \
-    mv /root/FounzyWeb/startup /usr/bin && \
-    mv /root/FounzyWeb/gitclone /usr/bin && \
-    mv /root/FounzyWeb/permchk /usr/bin && \
-    mv /root/FounzyWeb/update /usr/bin && \
+    cd /root/FounzyWeb-PHP && \
+    sed -i 's/\r//' /root/FounzyWeb-PHP/gitclone && \
+    sed -i 's/\r//' /root/FounzyWeb-PHP/permchk && \
+    sed -i 's/\r//' /root/FounzyWeb-PHP/update && \
+    sed -i 's/\r//' /root/FounzyWeb-PHP/startup && \
+    mv /root/FounzyWeb-PHP/startup /usr/bin && \
+    mv /root/FounzyWeb-PHP/gitclone /usr/bin && \
+    mv /root/FounzyWeb-PHP/permchk /usr/bin && \
+    mv /root/FounzyWeb-PHP/update /usr/bin && \
     mkdir /FounzyCONF && \
-    mv /root/FounzyWeb/Founzy.conf /FounzyCONF && \
-    mv /root/FounzyWeb/index.php /FounzyCONF && \
+    mv /root/FounzyWeb-PHP/Founzy.conf /FounzyCONF && \
+    mv /root/FounzyWeb-PHP/index.php /FounzyCONF && \
     rm dockerfile && \
     ln -s /FounzyCONF/Founzy.conf /etc/nginx/sites-available/Founzy.conf && \
     ln -s /FounzyCONF/Founzy.conf /etc/nginx/sites-enabled/Founzy.conf && \
