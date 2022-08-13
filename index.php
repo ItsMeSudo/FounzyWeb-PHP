@@ -16,9 +16,13 @@
     <center>
         <h3>
             <?php 
-            echo "Jelenlegi PHP verzió: " . phpversion();
-            echo "Jogosultságok a /data mappába: ". substr(sprintf('%o', fileperms('/data')), -4);
-            echo "Jelenleg használatban lévő kiegészítők: ". get_loaded_extensions();
+            echo "Jelenlegi PHP verzió: " . phpversion(). "<br>". "Jogosultságok a /data mappába: ". substr(sprintf('%o', fileperms('/data')), -4). "<br>". "Jelenleg használatban lévő kiegészítők: ";
+
+            function prettyPrint($a) {
+                echo '<pre>'.print_r($a,1).'</pre>';
+            }
+            $s = get_loaded_extensions();
+            prettyPrint($s);
             ?>
         </h3>
     </center>

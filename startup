@@ -4,16 +4,22 @@
 st () {
     /usr/sbin/nginx
 }
+phpst() {
+    cd /etc/init.d
+    ./php8.0-fpm
+}
 
 normal_startup() {
     echo "A mappa nem üres" && \
     st
+    phpst
 }
 
 emptystart() {
     echo "A mappa üres" && \
     mv /FounzyCONF/index.php /data && \
     st
+    phpst
 }
 
 if find /data -mindepth 1 -maxdepth 1 | read; then
