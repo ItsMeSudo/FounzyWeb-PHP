@@ -1,0 +1,23 @@
+#!/bin/bash
+#FounzyWeb server  &&&& DEBIAN
+#SUDO                 2022              SERVERHU.EU
+st () {
+    /usr/sbin/nginx
+}
+
+normal_startup() {
+    echo "A mappa nem üres" && \
+    st
+}
+
+emptystart() {
+    echo "A mappa üres" && \
+    mv /FounzyCONF/index.php /data && \
+    st
+}
+
+if find /data -mindepth 1 -maxdepth 1 | read; then
+   normal_startup
+else
+   emptystart
+fi
