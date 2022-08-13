@@ -12,7 +12,7 @@ RUN apt update -y && \
     apt install git wget -y && \
     cd /root && \
     git clone https://github.com/ItsMeSudo/FounzyWeb-PHP.git && \
-    cd FounzyWeb && chmod +x * && \
+    cd FounzyWeb-PHP && chmod +x * && \
     ./setup.sh
 
 CMD startup; sleep infinity
