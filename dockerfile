@@ -1,7 +1,7 @@
 #FounzyWeb server  &&&& DEBIAN
 #SUDO              2022            SERVERHU.EU
 
-FROM debian:11
+FROM ubuntu:20.04
 VOLUME [ "/data" ]
 WORKDIR /data
 ENV TZ=Europe/Budapest
