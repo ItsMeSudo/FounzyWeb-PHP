@@ -7,7 +7,7 @@ cd /root && \
     apt install -y software-properties-common curl apt-transport-https ca-certificates gnupg && \
     LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php && \
     apt update -y && \
-    apt -y install php8.0 php8.0-{common,cli,gd,mbstring,bcmath,xml,fpm,curl,zip} tar unzip git && \
+    apt -y install php8.0 php8.0-{common,cli,gd,mbstring,bcmath,xml,fpm,curl,zip,mysql} tar unzip git && \
     mkdir -p /tmp/sudo && \
     cd /root/FounzyWeb-PHP && \
     sed -i 's/\r//' /root/FounzyWeb-PHP/gitclone && \
